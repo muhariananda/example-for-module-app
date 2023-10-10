@@ -1,16 +1,11 @@
-# example_for_module_app
+# Aplikasi Catatan
 
-A new Flutter project.
+## DESCLAIMER JANGAN DI COPAS YA, LEBIH BAIK PAHAMI DAN DITULIS ULANG HEHE
 
-## Getting Started
+Aplikasi catatan sederhana, dimana hanya memiliki fitur menambahkan dan menghapus catatan. Data hanya disimpan di memori, tidak di basis data, sehingga data akan hilang ketika dijalankan kembali atau restart. Aplikasi ini bertujuan sebagai media demo atau contoh saja, sehingga sangat sederhana sekali.
 
-This project is a starting point for a Flutter application.
+## Screenshoot
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| List | Detail |
+| ----------- | ----------- |
+| ![Halaman list](screenshot/list-page.png) | ![Halaman insert](screenshot/upsert-page.png) |
