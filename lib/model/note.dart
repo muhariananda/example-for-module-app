@@ -1,4 +1,3 @@
-import 'package:example_for_module_app/model/priority.dart';
 import 'package:flutter/material.dart';
 
 @immutable
@@ -14,4 +13,11 @@ class Note {
   final String content;
   final String date;
   final Priority priority;
+}
+
+
+enum Priority {
+  low,
+  medium,
+  high,
 }

@@ -1,8 +1,8 @@
 import 'package:example_for_module_app/model/note.dart';
-import 'package:example_for_module_app/model/priority.dart';
-import 'package:example_for_module_app/utils/date.dart';
+import 'package:example_for_module_app/view/components/snack_bar.dart';
 import 'package:example_for_module_app/viewmodel/note_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class NoteInsertPage extends StatefulWidget {
   const NoteInsertPage({super.key});
@@ -82,16 +82,23 @@ class _NoteInsertPageState extends State<NoteInsertPage> {
     final note = Note(
       _titleController.text,
       _contentController.text,
-      getCurrentDate(),
+      _getCurrentDate(),
       _priority,
     );
 
     NoteController.to.addNote(note);
 
-    const snackBar = SnackBar(
-      content: Text('Note is added'),
+    showSnackBar(
+      context,
+      message: 'note is added',
     );
-    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-    Navigator.pop(context);
+  }
+
+  String _getCurrentDate() {
+    final currentDate = DateTime.now();
+    final formatter = DateFormat('d MMM');
+    final formattedDate = formatter.format(currentDate);
+
+    return formattedDate;
   }
 }

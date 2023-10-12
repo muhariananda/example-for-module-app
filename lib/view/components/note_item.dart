@@ -1,5 +1,4 @@
 import 'package:example_for_module_app/model/note.dart';
-import 'package:example_for_module_app/utils/utils.dart';
 import 'package:example_for_module_app/view/pages/note_detail_page.dart';
 import 'package:flutter/material.dart';
 
@@ -64,5 +63,16 @@ class NoteItem extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Color priorityToColor(Priority priority) {
+    switch (priority) {
+      case Priority.high:
+        return const Color(0xFFff6b6b);
+      case Priority.medium:
+        return const Color(0xFFfeca57);
+      case Priority.low:
+        return const Color(0xFF1dd1a1);
+    }
   }
 }

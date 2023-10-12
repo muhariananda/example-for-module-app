@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.yellowAccent),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.yellowAccent,
+        ),
         useMaterial3: true,
       ),
       initialRoute: NoteListPage.routeName,
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
         NoteInsertPage.routeName: (_) => const NoteInsertPage(),
         NoteDetailPage.routeName: (context) {
           final args = ModalRoute.of(context)!.settings.arguments;
-          return NoteDetailPage(note: args as Note);
+          return NoteDetailPage(note: args! as Note);
         }
       },
     );
